@@ -35,10 +35,23 @@ def add(a,b):
     """
 
     >>> add(3,4)
-        7
+    7
     """ 
     return a+b
 
 The following function is inside file **test_module02**. To run doc test , you dont need any explicit package or code. Just run the python file with "-m doctest" with -vv, which is verbose.
-
+```
+ python3 -m doctest -v test_module02.py
+```
 You can make the test fail by changing a+b to *(multiply) operator. Hence, it is fault in code. Also, you can send wrong input like add([{a,b},{t,y}). Similarly, if the expected output is wrong, test will fail. Hence, three ways test might fail.
+
+
+DOC Test is for novice test features. However, its limitation are many which will push us forward to learn other test apis and features. DOC test can simply test the expected output and its data type, hence wqe can test the function's working after tempering the code in small extent.
+
+Furthermore, It could be written in txt file as well. You can write python prompt command which will be parsed and executed. 
+If you open test_doctest.txt file which is inside the directory of chapter-02, you can see the python prompt command. If you run those using 
+```
+python3 -m doctest test_doctest.txt
+```
+
+this command will test all the test cases mentioned there. You can run and see yourself. Its is simple. For further info follow the documentation: [https://docs.python.org/3/library/doctest.html]
